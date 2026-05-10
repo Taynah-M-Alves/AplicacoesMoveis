@@ -6,8 +6,8 @@ import {TelaCadastro} from "./src/pages/cadastro"
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <TelaBoasVindas/> */}
-      <TelaCadastro/>
+      <TelaBoasVindas/>
+      {/* <TelaCadastro/> */}
       <StatusBar style="auto" />
     </View>
   );

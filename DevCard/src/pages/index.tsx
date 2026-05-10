@@ -1,13 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 import { IdCardLanyard, IdCard  } from 'lucide-react-native';
 
 export default function TelaBoasVindas() {
   return (
     <View style={styles.container}>
-        <IdCard  size={120} color='purple'/>    
+        <Image 
+          source={require('../../assets/logo_sem_fundo.png')}
+          style={styles.image}
+        />  
         <View>
-            <Text style={styles.title}>DevCard</Text>
+            {/* <Text style={styles.title}>DevCard</Text> */}
             <Text style={styles.subtitle}>Seu cartão de visita digital de dev mobile</Text>
         </View>  
         
@@ -25,24 +28,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'column',
+  },
+   image:{
+    width: 350,
+    height: 280,
   },
   title:{
     color: 'purple',
     fontSize: 100,
     fontFamily: 'Helvetica',
-    marginTop: -20
   },
   subtitle:{
-    fontSize:20
+    maxWidth:250,
+    fontSize:20,
+    textAlign: 'center'
   },
   buttonContainer:{
     padding: 15,
-    backgroundColor:'purple',
-    marginTop:80,
+    backgroundColor:'#3C096C',
+    marginTop:40,
     borderRadius: 10,
   },
   buttonText:{
-    color:'white',
+    color:'rgb(255, 255, 255)',
     fontSize: 25
     
   }
