@@ -7,9 +7,10 @@ interface InputProps{
   placeholderProp:string;
   keyboardTypeProp: any;
   isPassword: boolean;
+  onChangeText: any;
 }
 
-export function Input({labelProp, placeholderProp, keyboardTypeProp, isPassword}:InputProps) {
+export function Input({labelProp, placeholderProp, keyboardTypeProp, isPassword, onChangeText}:InputProps) {
   
   let secureTextProp:boolean = false
   if (isPassword) {
@@ -27,7 +28,8 @@ export function Input({labelProp, placeholderProp, keyboardTypeProp, isPassword}
         placeholder= {placeholderProp}
         style ={styles.input}
         keyboardType={keyboardTypeProp}
-        secureTextEntry = {secureTextProp} />
+        secureTextEntry = {secureTextProp} 
+        onChangeText={onChangeText}/>
 
       </View>
      
